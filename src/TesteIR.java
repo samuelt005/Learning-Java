@@ -1,4 +1,4 @@
-public class testeIR {
+public class TesteIR {
     public static void main(String[] args) {
 
         double salario = 2700.0;

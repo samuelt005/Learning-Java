@@ -1,4 +1,4 @@
-public class scopeTest {
+public class ScopeTest {
     public static void main(String[] args) {
         System.out.println("condition test");
         int age = 18;
