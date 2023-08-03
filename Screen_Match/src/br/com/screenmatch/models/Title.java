@@ -10,8 +10,6 @@ public class Title {
     private int durationInMinutes;
 
     //Other Methods
-
-
     public void evaluate(double n) {
         ratingSum += n;
         amountOfScores++;
@@ -22,7 +20,7 @@ public class Title {
         return getRatingSum() / getAmountOfScores();
     };
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
@@ -42,11 +40,11 @@ public class Title {
         return ratingSum;
     }
 
-    int getAmountOfScores() {
+    public int getAmountOfScores() {
         return amountOfScores;
     }
 
-    int getDurationInMinutes() {
+    public int getDurationInMinutes() {
         return durationInMinutes;
     }
 
