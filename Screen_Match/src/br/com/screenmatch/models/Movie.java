@@ -6,6 +6,11 @@ public class Movie extends Title implements Classification {
     //Atributes specific for titles
     private String director;
 
+    //Constructor
+    public Movie(String name, int releaseDate) {
+        super(name, releaseDate);
+    }
+
     //Other Methods
     public void showDatasheet() {
         System.out.println("Nome do filme: " + getName());

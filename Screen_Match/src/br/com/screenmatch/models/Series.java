@@ -7,6 +7,11 @@ public class Series extends Title {
     private int episodesPerSeason;
     private int minutesPerSeason;
 
+    //Constructor
+    public Series(String name, int releaseDate) {
+        super(name, releaseDate);
+    }
+
     //Override Methods
     @Override
     public int getDurationInMinutes() {

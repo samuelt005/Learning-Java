@@ -1,6 +1,6 @@
 package br.com.screenmatch.models;
 
-public class Title {
+public class Title implements Comparable<Title> {
     //Atributes
     private String name;
     private int releaseDate;
@@ -9,10 +9,26 @@ public class Title {
     private int amountOfScores;
     private int durationInMinutes;
 
+    //Constructor
+    public Title(String name, int releaseDate) {
+        this.name = name;
+        this.releaseDate = releaseDate;
+    }
+
     //Other Methods
     public void evaluate(double n) {
         ratingSum += n;
         amountOfScores++;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + " (" + this.getReleaseDate() + ")";
+    }
+
+    @Override
+    public int compareTo(Title anotherTitle) {
+        return this.getName().compareTo(anotherTitle.getName());
     }
 
     //Getter Methods
@@ -24,7 +40,7 @@ public class Title {
         return name;
     }
 
-    int getReleaseDate() {
+    public int getReleaseDate() {
         return releaseDate;
     }
 
