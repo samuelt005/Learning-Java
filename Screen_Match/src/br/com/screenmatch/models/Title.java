@@ -1,12 +1,11 @@
 package br.com.screenmatch.models;
 
+import br.com.screenmatch.exceptions.ConversionException;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
     //Atributes
-    @SerializedName("Title")
     private String name;
-    @SerializedName("Year")
     private int releaseDate;
     private boolean planIncluded;
     private double ratingSum;
@@ -21,6 +20,10 @@ public class Title implements Comparable<Title> {
 
     public Title(OmdbTitle omdbTitle) {
         this.name = omdbTitle.title();
+        if (omdbTitle.year().length() > 4) {
+            throw new ConversionException("Não foi possível converter o ano " +
+                    "por ter mais de 4 caracteres!");
+        }
         this.releaseDate = Integer.valueOf(omdbTitle.year());
         this.durationInMinutes = Integer.valueOf(omdbTitle.runtime().substring(0,2));
     }
