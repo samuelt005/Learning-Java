@@ -1,8 +1,12 @@
 package br.com.screenmatch.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable<Title> {
     //Atributes
+    @SerializedName("Title")
     private String name;
+    @SerializedName("Year")
     private int releaseDate;
     private boolean planIncluded;
     private double ratingSum;
@@ -15,6 +19,12 @@ public class Title implements Comparable<Title> {
         this.releaseDate = releaseDate;
     }
 
+    public Title(OmdbTitle omdbTitle) {
+        this.name = omdbTitle.title();
+        this.releaseDate = Integer.valueOf(omdbTitle.year());
+        this.durationInMinutes = Integer.valueOf(omdbTitle.runtime().substring(0,2));
+    }
+
     //Other Methods
     public void evaluate(double n) {
         ratingSum += n;
@@ -23,7 +33,7 @@ public class Title implements Comparable<Title> {
 
     @Override
     public String toString() {
-        return this.getName() + " (" + this.getReleaseDate() + ")";
+        return this.getName() + " (" + this.getReleaseDate() + ")" + " - Duração: " + this.getDurationInMinutes();
     }
 
     @Override

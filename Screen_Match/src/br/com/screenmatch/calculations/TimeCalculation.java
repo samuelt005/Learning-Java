@@ -1,7 +1,5 @@
 package br.com.screenmatch.calculations;
 
-import br.com.screenmatch.models.Movie;
-import br.com.screenmatch.models.Series;
 import br.com.screenmatch.models.Title;
 
 public class TimeCalculation {

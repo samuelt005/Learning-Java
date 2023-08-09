@@ -2,13 +2,9 @@ package br.com.screenmatch.main;
 
 import br.com.screenmatch.calculations.RecomendationFilter;
 import br.com.screenmatch.calculations.TimeCalculation;
-import br.com.screenmatch.models.Episodes;
+import br.com.screenmatch.models.Episode;
 import br.com.screenmatch.models.Movie;
-import br.com.screenmatch.models.Series;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Objects;
+import br.com.screenmatch.models.Serie;
 
 public class Main {
     public static void main(String[] args) {
@@ -58,7 +54,7 @@ public class Main {
         System.out.println();
 
         //Instanced Series
-        Series lost = new Series("Lost", 2004);
+        Serie lost = new Serie("Lost", 2004);
         lost.setPlanIncluded(true);
         lost.setSeasons(6);
         lost.setEpisodesPerSeason(18);
@@ -74,7 +70,7 @@ public class Main {
         System.out.println();
 
         //Instanced Episodes
-        Episodes episode = new Episodes();
+        Episode episode = new Episode();
         episode.setNumber(1);
         episode.setSeries(lost);
         episode.setName("Pilot (Part 1)");

@@ -1,6 +1,6 @@
 package br.com.screenmatch.models;
 
-public class Series extends Title {
+public class Serie extends Title {
     //Atributes specific for series
     private  int seasons;
     private boolean active;
@@ -8,7 +8,7 @@ public class Series extends Title {
     private int minutesPerSeason;
 
     //Constructor
-    public Series(String name, int releaseDate) {
+    public Serie(String name, int releaseDate) {
         super(name, releaseDate);
     }
 

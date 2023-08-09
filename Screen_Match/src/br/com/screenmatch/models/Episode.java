@@ -2,11 +2,11 @@ package br.com.screenmatch.models;
 
 import br.com.screenmatch.calculations.Classification;
 
-public class Episodes implements Classification {
+public class Episode implements Classification {
     //Attributes
     private int number;
     private String name;
-    private Series series;
+    private Serie serie;
     private int totalViews;
 
     //Other Methods
@@ -28,8 +28,8 @@ public class Episodes implements Classification {
         return name;
     }
 
-    public Series getSeries() {
-        return series;
+    public Serie getSeries() {
+        return serie;
     }
 
     public int getTotalViews() {
@@ -45,8 +45,8 @@ public class Episodes implements Classification {
         this.name = name;
     }
 
-    public void setSeries(Series series) {
-        this.series = series;
+    public void setSeries(Serie serie) {
+        this.serie = serie;
     }
 
     public void setTotalViews(int totalViews) {

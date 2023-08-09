@@ -1,7 +1,7 @@
 package br.com.screenmatch.main;
 
 import br.com.screenmatch.models.Movie;
-import br.com.screenmatch.models.Series;
+import br.com.screenmatch.models.Serie;
 import br.com.screenmatch.models.Title;
 
 import java.util.*;
@@ -14,7 +14,7 @@ public class MainLists {
         interstellar.evaluate(10);
         Movie rambo = new Movie("Rambo", 1982);
         rambo.evaluate(8);
-        Series lost = new Series("Lost", 2004);
+        Serie lost = new Serie("Lost", 2004);
         lost.evaluate(7);
 
         //Movies Array
